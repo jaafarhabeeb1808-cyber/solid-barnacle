@@ -1,0 +1,513 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  html[dir='rtl'] body {
+    font-family: 'Noto Sans Arabic', sans-serif;
+  }
+  html[dir='rtl'] .font-display {
+    font-family: 'Aref Ruqaa', serif;
+  }
+  html[dir='rtl'] .font-body {
+    font-family: 'Noto Naskh Arabic', serif;
+  }
+  html[dir='ltr'] body {
+    font-family: 'Karla', sans-serif;
+  }
+
+  body {
+    background-color: #0a0307;
+    color: #f6efe2;
+  }
+
+  ::selection {
+    background: rgba(190, 180, 158, 0.35);
+    color: #f6efe2;
+  }
+
+  [data-lang='ar'] .lang-fr,
+  [data-lang='ar'] .lang-en {
+    display: none;
+  }
+  [data-lang='fr'] .lang-ar,
+  [data-lang='fr'] .lang-en {
+    display: none;
+  }
+  [data-lang='en'] .lang-ar,
+  [data-lang='en'] .lang-fr {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .text-gold-gradient {
+    background-image: linear-gradient(90deg, #857870 0%, #DDD5C4 25%, #EAE4D8 50%, #DDD5C4 75%, #857870 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gold-gradient.is-shimmering {
+    animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards, shimmer 3.5s linear infinite;
+  }
+
+  .hairline-gold {
+    border-color: rgba(190, 180, 158, 0.35);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* Section title entrance: blur + slide-up */
+  .reveal-title {
+    opacity: 0;
+    transform: translateY(48px);
+    filter: blur(10px);
+    transition:
+      opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+      filter 0.85s ease;
+  }
+  .reveal-title.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+  /* Eyebrow label above title */
+  .reveal-eyebrow {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+  }
+  .reveal-eyebrow.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      transform: none;
+      transition: opacity 0.4s ease;
+    }
+    .reveal-title, .reveal-eyebrow {
+      filter: none;
+      transform: none;
+      transition: opacity 0.4s ease;
+    }
+  }
+
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background: #BEB49E;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s ease;
+  }
+  .nav-link:hover::after,
+  .nav-link.is-active::after {
+    transform: scaleX(1);
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-7 py-3 text-sm uppercase tracking-[0.2em] transition-all duration-300;
+    background: linear-gradient(90deg, #A09082, #DDD5C4, #A09082);
+    color: #1b090c;
+  }
+  .btn-gold:hover {
+    box-shadow: 0 0 28px rgba(190, 180, 158, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border px-7 py-3 text-sm uppercase tracking-[0.2em] transition-all duration-300;
+    border-color: rgba(190, 180, 158, 0.5);
+    color: #DDD5C4;
+  }
+  .btn-outline-gold:hover {
+    background: rgba(190, 180, 158, 0.1);
+    border-color: #DDD5C4;
+  }
+
+  .card-surface {
+    background: linear-gradient(180deg, rgba(61, 15, 26, 0.55), rgba(18, 6, 8, 0.65));
+    border: 1px solid rgba(190, 180, 158, 0.18);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(237, 227, 204, 0.06);
+  }
+
+  .menu-tab-btn {
+    @apply font-sans text-xs sm:text-sm uppercase tracking-[0.15em] rounded-md border px-5 py-2.5 transition-all duration-300;
+    border-color: rgba(190, 180, 158, 0.25);
+    color: rgba(246, 239, 226, 0.6);
+  }
+  .menu-tab-btn:hover {
+    color: #DDD5C4;
+    border-color: rgba(190, 180, 158, 0.5);
+  }
+  .menu-tab-btn.is-active {
+    background: rgba(190, 180, 158, 0.12);
+    border-color: #BEB49E;
+    color: #EAE4D8;
+  }
+
+  .menu-panel.hidden {
+    display: none;
+  }
+
+  .menu-item {
+    @apply card-surface rounded-2xl overflow-hidden transition-transform duration-300;
+  }
+  .menu-item:hover {
+    transform: translateY(-3px);
+  }
+  .menu-item-img {
+    @apply relative overflow-hidden;
+    aspect-ratio: 16 / 10;
+  }
+  .menu-item-img img {
+    @apply w-full h-full object-cover transition-transform duration-700;
+  }
+  .menu-item:hover .menu-item-img img {
+    transform: scale(1.05);
+  }
+  .menu-item-body {
+    @apply p-6;
+  }
+
+  .gallery-item {
+    @apply relative overflow-hidden rounded-2xl border;
+    border-color: rgba(190, 180, 158, 0.18);
+  }
+  .gallery-item img {
+    @apply w-full h-full object-cover transition-transform duration-700;
+    min-height: 200px;
+  }
+  .gallery-item:hover img {
+    transform: scale(1.06);
+  }
+  .gallery-item figcaption {
+    @apply absolute inset-x-0 bottom-0 font-sans text-xs sm:text-sm uppercase tracking-[0.15em] px-4 py-3;
+    background: linear-gradient(180deg, transparent, rgba(10, 3, 7, 0.85));
+    color: #EAE4D8;
+  }
+
+  .form-label {
+    @apply block font-sans text-xs uppercase tracking-[0.15em] text-gold-300 mb-2;
+  }
+  .form-input {
+    @apply w-full rounded-xl px-4 py-3 font-body text-cream bg-night-900/70 border outline-none transition-colors duration-200;
+    border-color: rgba(190, 180, 158, 0.25);
+  }
+  .form-input:focus {
+    border-color: #BEB49E;
+    box-shadow: 0 0 0 3px rgba(190, 180, 158, 0.15);
+  }
+  .form-input::placeholder {
+    color: rgba(246, 239, 226, 0.35);
+  }
+
+  .social-icon {
+    @apply flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300;
+    border-color: rgba(190, 180, 158, 0.3);
+    color: #DDD5C4;
+  }
+  .social-icon:hover {
+    background: rgba(190, 180, 158, 0.12);
+    border-color: #DDD5C4;
+    transform: translateY(-2px);
+  }
+
+  /* Language switcher: AR / FR / EN */
+  .lang-switch {
+    @apply items-center gap-1 rounded-md border p-1;
+    border-color: rgba(190, 180, 158, 0.35);
+  }
+  .lang-switch [data-lang-btn] {
+    @apply font-sans text-xs uppercase tracking-[0.15em] rounded px-3 py-1.5 transition-colors duration-200;
+    color: rgba(246, 239, 226, 0.55);
+  }
+  .lang-switch [data-lang-btn]:hover {
+    color: #DDD5C4;
+  }
+  .lang-switch [data-lang-btn].is-active {
+    background: rgba(190, 180, 158, 0.18);
+    color: #EAE4D8;
+  }
+
+  /* Brand mark: gold "S" medallion with sparkle, matching the real Selena Instagram logo */
+  .brand-mark {
+    @apply inline-flex shrink-0 rounded-full overflow-hidden;
+    width: 2.3rem;
+    height: 2.3rem;
+    animation: logo-pulse 3.2s ease-in-out infinite;
+  }
+  .brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .brand-mark {
+      animation: none;
+    }
+  }
+
+  /* Stat row: count-up figures in the Story section */
+  .stat-row {
+    @apply flex flex-wrap justify-center gap-x-10 gap-y-6 text-center;
+  }
+  .stat-item {
+    @apply flex flex-col items-center gap-1;
+  }
+  .stat-number,
+  .stat-number-static {
+    @apply font-display text-3xl sm:text-4xl text-gold-200;
+  }
+  .stat-label {
+    @apply font-sans text-xs uppercase tracking-[0.2em] text-cream/55;
+  }
+
+  /* Button shimmer sweep on hover */
+  .btn-gold {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-gold::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.6s ease;
+  }
+  .btn-gold:hover::after {
+    transform: translateX(120%);
+  }
+
+  /* Arch card: replica of the Selena Instagram contact story (gold arch + sunburst star) */
+  .arch-card {
+    position: relative;
+    width: min(420px, 86vw);
+    filter: drop-shadow(0 0 36px rgba(190, 180, 158, 0.16));
+  }
+  .arch-card-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .arch-line {
+    fill: none;
+    stroke: #BEB49E;
+  }
+  .arch-line-outer {
+    stroke-width: 2;
+    opacity: 0.9;
+  }
+  .arch-line-inner {
+    stroke-width: 1;
+    opacity: 0.55;
+  }
+  .arch-corner {
+    fill: none;
+    stroke: #BEB49E;
+    stroke-width: 1.2;
+  }
+  .arch-flourish {
+    stroke-width: 1;
+    opacity: 0.75;
+  }
+  .arch-finial {
+    fill: #BEB49E;
+    stroke: none;
+  }
+  .arch-diamonds rect {
+    fill: #BEB49E;
+  }
+  .arch-card-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 14%;
+  }
+  .arch-card-label {
+    @apply font-display text-2xl text-gold-200 mb-3;
+  }
+  .arch-card-numbers {
+    @apply font-display text-lg text-cream/90 flex flex-col gap-1.5;
+    letter-spacing: 0.08em;
+  }
+  .arch-card-numbers a {
+    @apply transition-colors duration-300;
+  }
+  .arch-card-numbers a:hover {
+    color: #EAE4D8;
+  }
+}
+
+@keyframes logo-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(190, 180, 158, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(190, 180, 158, 0.12);
+  }
+}
+
+/* ============ Ambient glow orbs (different light per section) ============ */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(60px);
+  background: radial-gradient(circle, rgba(190, 180, 158, 0.32) 0%, rgba(190, 180, 158, 0) 70%);
+  animation: orb-drift 18s ease-in-out infinite;
+}
+.glow-orb--warm {
+  background: radial-gradient(circle, rgba(156, 28, 60, 0.4) 0%, rgba(156, 28, 60, 0) 70%);
+}
+.glow-orb--md {
+  width: 380px;
+  height: 380px;
+}
+.glow-orb--lg {
+  width: 560px;
+  height: 560px;
+}
+.glow-orb--top-left {
+  top: -10%;
+  left: -10%;
+}
+.glow-orb--top-right {
+  top: -10%;
+  right: -10%;
+  animation-delay: -4s;
+}
+.glow-orb--top-center {
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: -2s;
+}
+.glow-orb--bottom-left {
+  bottom: -15%;
+  left: -10%;
+  animation-delay: -6s;
+}
+.glow-orb--bottom-right {
+  bottom: -15%;
+  right: -10%;
+  animation-delay: -9s;
+}
+.glow-orb--center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: -3s;
+}
+.glow-orb--center-right {
+  top: 30%;
+  right: -8%;
+  animation-delay: -5s;
+}
+@keyframes orb-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.15);
+  }
+}
+.glow-orb--center,
+.glow-orb--center-right {
+  animation-name: orb-drift-center;
+}
+@keyframes orb-drift-center {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(calc(-50% + 30px), calc(-50% - 20px)) scale(1.12);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glow-orb {
+    animation: none;
+  }
+}
+
+/* ============ Hero mouse-tracking spotlight ============ */
+.spotlight {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    480px circle at var(--spot-x, 50%) var(--spot-y, 30%),
+    rgba(237, 227, 204, 0.14),
+    transparent 60%
+  );
+  transition: background 0.2s ease-out;
+}
+
+/* ============ Holographic tilt cards ============ */
+.tilt-card {
+  --tx: 50%;
+  --ty: 50%;
+  transition: transform 0.25s ease-out;
+  will-change: transform;
+}
+.tilt-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  background: radial-gradient(circle 140px at var(--tx) var(--ty), rgba(237, 227, 204, 0.22), transparent 70%);
+  transition: opacity 0.3s ease;
+}
+.tilt-card:hover::before {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card {
+    transition: none;
+  }
+}

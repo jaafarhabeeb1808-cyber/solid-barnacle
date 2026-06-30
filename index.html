@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>سيلينا | Selena — Fine Dining Baghdad</title>
+<meta name="description" content="سيلينا — تجربة طعام فاخرة ومتعددة الثقافات في بغداد، مفتوحة من ٨ صباحًا حتى ٣ فجرًا. Selena — luxury multicultural dining in Baghdad, open 8AM–3AM." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@300;400;500;600;700&family=Aref+Ruqaa:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dist/output.css" />
+</head>
+<body class="bg-night-950 text-cream antialiased overflow-x-hidden">
+
+<!-- ============ STARFIELD BACKGROUND (fixed, behind everything) ============ -->
+<div id="starfield" class="fixed inset-0 -z-10 bg-burgundy-gradient overflow-hidden" aria-hidden="true">
+  <div class="absolute inset-0 bg-radial-fade"></div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-50 transition-colors duration-500" id="site-header">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-20">
+    <a href="#home" class="flex items-center gap-3 font-display text-2xl sm:text-3xl tracking-wide text-gold-gradient">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="assets/selena-logo.jpg" alt="" />
+      </span>
+      <span><span class="lang-ar">سيلينا</span><span class="lang-fr">Selena</span><span class="lang-en">Selena</span></span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-9 font-sans text-sm uppercase tracking-[0.15em]">
+      <a href="#home" class="nav-link is-active"><span class="lang-ar">الرئيسية</span><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a>
+      <a href="#menu" class="nav-link"><span class="lang-ar">القائمة</span><span class="lang-fr">Menu</span><span class="lang-en">Menu</span></a>
+      <a href="#story" class="nav-link"><span class="lang-ar">قصتنا</span><span class="lang-fr">Notre Histoire</span><span class="lang-en">Our Story</span></a>
+      <a href="#reservations" class="nav-link"><span class="lang-ar">الحجوزات</span><span class="lang-fr">Réservations</span><span class="lang-en">Reservations</span></a>
+      <a href="#location" class="nav-link"><span class="lang-ar">الموقع</span><span class="lang-fr">Emplacement</span><span class="lang-en">Location</span></a>
+      <a href="#contact" class="nav-link"><span class="lang-ar">تواصل معنا</span><span class="lang-fr">Contact</span><span class="lang-en">Contact</span></a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:inline-flex lang-switch" role="group" aria-label="Switch language">
+        <button type="button" data-lang-btn="ar">AR</button>
+        <button type="button" data-lang-btn="fr">FR</button>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <a href="#reservations" class="hidden md:inline-flex btn-gold !px-5 !py-2.5 text-xs">
+        <span class="lang-ar">احجز الآن</span><span class="lang-fr">Réserver</span><span class="lang-en">Book Now</span>
+      </a>
+      <button id="nav-toggle" type="button" class="lg:hidden p-2 text-gold-300" aria-label="Open menu" aria-expanded="false">
+        <svg id="icon-burger" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="hidden"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <nav id="mobile-nav" class="lg:hidden hidden flex-col gap-1 px-5 pb-6 pt-2 bg-night-900/95 backdrop-blur-md border-t hairline-gold border-t-[0.5px]">
+    <a href="#home" class="block py-3 font-sans text-sm uppercase tracking-[0.15em] border-b border-white/5"><span class="lang-ar">الرئيسية</span><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a>
+    <a href="#menu" class="block py-3 font-sans text-sm uppercase tracking-[0.15em] border-b border-white/5"><span class="lang-ar">القائمة</span><span class="lang-fr">Menu</span><span class="lang-en">Menu</span></a>
+    <a href="#story" class="block py-3 font-sans text-sm uppercase tracking-[0.15em] border-b border-white/5"><span class="lang-ar">قصتنا</span><span class="lang-fr">Notre Histoire</span><span class="lang-en">Our Story</span></a>
+    <a href="#reservations" class="block py-3 font-sans text-sm uppercase tracking-[0.15em] border-b border-white/5"><span class="lang-ar">الحجوزات</span><span class="lang-fr">Réservations</span><span class="lang-en">Reservations</span></a>
+    <a href="#location" class="block py-3 font-sans text-sm uppercase tracking-[0.15em] border-b border-white/5"><span class="lang-ar">الموقع</span><span class="lang-fr">Emplacement</span><span class="lang-en">Location</span></a>
+    <a href="#contact" class="block py-3 font-sans text-sm uppercase tracking-[0.15em]"><span class="lang-ar">تواصل معنا</span><span class="lang-fr">Contact</span><span class="lang-en">Contact</span></a>
+    <div class="lang-switch mt-4" role="group" aria-label="Switch language">
+      <button type="button" data-lang-btn="ar">AR</button>
+      <button type="button" data-lang-btn="fr">FR</button>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative min-h-[100dvh] flex items-center justify-center px-5 sm:px-8 pt-28 pb-20 overflow-hidden">
+  <div class="absolute inset-0 z-0 bg-burgundy-gradient" aria-hidden="true">
+    <div class="absolute inset-0 bg-radial-fade"></div>
+    <div class="glow-orb glow-orb--top-left glow-orb--lg"></div>
+    <div class="glow-orb glow-orb--bottom-right glow-orb--md"></div>
+    <div class="spotlight" id="heroSpotlight"></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+
+    <div class="opacity-0 animate-fade-in flex justify-center mb-6" style="animation-delay:.1s;animation-fill-mode:forwards">
+      <svg width="120" height="14" viewBox="0 0 120 14" fill="none" stroke="#BEB49E" stroke-width="1">
+        <path d="M0 7 H46" stroke-opacity="0.8"/>
+        <rect x="56" y="3" width="8" height="8" transform="rotate(45 60 7)" fill="#BEB49E" stroke="none"/>
+        <path d="M74 7 H120" stroke-opacity="0.8"/>
+      </svg>
+    </div>
+
+    <p class="opacity-0 animate-fade-up font-sans text-xs sm:text-sm uppercase tracking-[0.35em] text-gold-300 mb-5" style="animation-delay:.2s;animation-fill-mode:forwards">
+      <span class="lang-ar">بغداد · تجربة طعام أسطورية</span><span class="lang-fr">Bagdad · Une expérience culinaire d'exception</span><span class="lang-en">Baghdad · An Exceptional Dining Experience</span>
+    </p>
+
+    <h1 class="opacity-0 animate-fade-up font-display text-gold-gradient is-shimmering text-[3.2rem] sm:text-7xl lg:text-8xl leading-[1.05] mb-6" style="animation-delay:.35s;animation-fill-mode:forwards">
+      <span class="lang-ar">سيلينا</span><span class="lang-fr">Selena</span><span class="lang-en">Selena</span>
+    </h1>
+
+    <p class="opacity-0 animate-fade-up font-body text-lg sm:text-2xl text-cream/85 max-w-2xl mx-auto mb-10 leading-relaxed" style="animation-delay:.5s;animation-fill-mode:forwards">
+      <span class="lang-ar">حيث تلتقي نكهات العالم في قلب بغداد — رحلة طعام فاخرة بين الثقافات، من الفجر حتى الفجر.</span><span class="lang-fr">Là où les saveurs du monde se rencontrent au cœur de Bagdad — un voyage culinaire de luxe entre les cultures, de l'aube à l'aube.</span><span class="lang-en">Where the flavors of the world meet in the heart of Baghdad — a luxurious culinary journey between cultures, from dawn to dawn.</span>
+    </p>
+
+    <div class="opacity-0 animate-fade-up flex flex-wrap items-center justify-center gap-4 mb-10" style="animation-delay:.65s;animation-fill-mode:forwards">
+      <a href="#reservations" class="btn-gold">
+        <span class="lang-ar">احجز طاولتك</span><span class="lang-fr">Réserver une table</span><span class="lang-en">Reserve a Table</span>
+      </a>
+      <a href="#menu" class="btn-outline-gold">
+        <span class="lang-ar">استكشف القائمة</span><span class="lang-fr">Découvrir le menu</span><span class="lang-en">Explore the Menu</span>
+      </a>
+    </div>
+
+    <div class="opacity-0 animate-fade-up inline-flex items-center gap-2 rounded-full border hairline-gold px-5 py-2.5 text-xs sm:text-sm font-sans uppercase tracking-[0.2em] text-gold-200" style="animation-delay:.8s;animation-fill-mode:forwards">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3.5 2"/></svg>
+      <span class="lang-ar">مفتوح يوميًا · ٨ صباحًا – ٣ فجرًا</span><span class="lang-fr">Ouvert tous les jours · 8h – 3h</span><span class="lang-en">Open daily · 8AM – 3AM</span>
+    </div>
+  </div>
+
+  <button id="scroll-hint" aria-label="Scroll down" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gold-400/70 animate-drift">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v15M6 14l6 6 6-6"/></svg>
+  </button>
+</section>
+
+<!-- ============ STORY ============ -->
+<section id="story" class="relative py-24 sm:py-32 px-5 sm:px-8 bg-burgundy-950/40 overflow-hidden">
+  <div class="glow-orb glow-orb--center-right glow-orb--lg glow-orb--warm" aria-hidden="true"></div>
+  <div class="max-w-5xl mx-auto relative z-10">
+    <div class="reveal text-center mb-14">
+      <p class="reveal-eyebrow font-sans text-xs uppercase tracking-[0.3em] text-gold-400 mb-3">
+        <span class="lang-ar">قصتنا</span><span class="lang-fr">Notre Histoire</span><span class="lang-en">Our Story</span>
+      </p>
+      <h2 class="reveal-title font-display text-4xl sm:text-5xl text-cream mb-6">
+        <span class="lang-ar">مطعم سيلينا — بغداد</span><span class="lang-fr">Restaurant Selena — Bagdad</span><span class="lang-en">Selena Restaurant — Baghdad</span>
+      </h2>
+      <p class="font-body text-cream/75 max-w-3xl mx-auto text-lg leading-relaxed">
+        <span class="lang-ar">انطلاقة لشغفٍ صُنع بعناية لتقديم تجربة مذاق استثنائية وأجواء لا تُنسى، في قلب المنصور ببغداد.</span><span class="lang-fr">Le point de départ d'une passion façonnée avec soin pour offrir une expérience gustative exceptionnelle et une ambiance inoubliable, au cœur d'Al-Mansour à Bagdad.</span><span class="lang-en">The starting point of a passion crafted with care to offer an exceptional taste experience and an unforgettable atmosphere, in the heart of Al-Mansour, Baghdad.</span>
+      </p>
+    </div>
+
+    <div class="reveal stat-row mb-14">
+      <div class="stat-item">
+        <span class="stat-number" data-count-to="169" data-suffix="+">0</span>
+        <span class="stat-label"><span class="lang-ar">صنف</span><span class="lang-fr">plats</span><span class="lang-en">dishes</span></span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count-to="20">0</span>
+        <span class="stat-label"><span class="lang-ar">فئة</span><span class="lang-fr">catégories</span><span class="lang-en">categories</span></span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count-to="19">0</span>
+        <span class="stat-label"><span class="lang-ar">ساعة يوميًا</span><span class="lang-fr">heures/jour</span><span class="lang-en">hours/day</span></span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number-static"><span class="lang-ar">مايو ٢٠٢٦</span><span class="lang-fr">Mai 2026</span><span class="lang-en">May 2026</span></span>
+        <span class="stat-label"><span class="lang-ar">الافتتاح</span><span class="lang-fr">ouverture</span><span class="lang-en">opening</span></span>
+      </div>
+    </div>
+
+    <div class="reveal grid sm:grid-cols-2 gap-5">
+      <div class="card-surface rounded-2xl p-7">
+        <h3 class="font-display text-lg text-gold-200 mb-2"><span class="lang-ar">الموقع</span><span class="lang-fr">Emplacement</span><span class="lang-en">Location</span></h3>
+        <p class="font-body text-cream/70"><span class="lang-ar">المنصور، حي الداودي، شارع التانكي، بغداد.</span><span class="lang-fr">Al-Mansour, quartier Al-Dawoudi, rue Al-Tanki, Bagdad.</span><span class="lang-en">Al-Mansour, Al-Dawoudi district, Al-Tanki street, Baghdad.</span></p>
+      </div>
+      <div class="card-surface rounded-2xl p-7">
+        <h3 class="font-display text-lg text-gold-200 mb-2"><span class="lang-ar">الافتتاح</span><span class="lang-fr">Ouverture</span><span class="lang-en">Opening</span></h3>
+        <p class="font-body text-cream/70"><span class="lang-ar">افتُتح المطعم في مايو ٢٠٢٦، وقد استقطب الحدث اهتماماً واسعاً على وسائل التواصل الاجتماعي.</span><span class="lang-fr">Le restaurant a ouvert ses portes en mai 2026, un événement qui a suscité un large engouement sur les réseaux sociaux.</span><span class="lang-en">The restaurant opened its doors in May 2026, an event that drew widespread attention on social media.</span></p>
+      </div>
+      <div class="card-surface rounded-2xl p-7">
+        <h3 class="font-display text-lg text-gold-200 mb-2"><span class="lang-ar">المؤسس</span><span class="lang-fr">Fondateur</span><span class="lang-en">Founder</span></h3>
+        <p class="font-body text-cream/70"><span class="lang-ar">صاحب المطعم هو الأستاذ مصطفى، الذي أجرت معه مجلة مشاهير العراق لقاءً خاصاً بمناسبة الافتتاح.</span><span class="lang-fr">Le restaurant a été fondé par M. Mostafa, qui a accordé une interview exclusive au magazine Mashaheer Al-Iraq à l'occasion de l'ouverture.</span><span class="lang-en">The restaurant was founded by Mr. Mostafa, who gave an exclusive interview to Mashaheer Al-Iraq magazine for the opening.</span></p>
+      </div>
+      <div class="card-surface rounded-2xl p-7">
+        <h3 class="font-display text-lg text-gold-200 mb-2"><span class="lang-ar">الحضور الإعلامي</span><span class="lang-fr">Couverture médiatique</span><span class="lang-en">Media Coverage</span></h3>
+        <p class="font-body text-cream/70"><span class="lang-ar">استقطب حفل الافتتاح تغطيات من مجلة الكوكب ومجلة مشاهير العراق، وحضره عدد من الشخصيات البارزة.</span><span class="lang-fr">L'ouverture a été couverte par le magazine Al-Kawkab et le magazine Mashaheer Al-Iraq, en présence de plusieurs personnalités locales.</span><span class="lang-en">The opening was covered by Al-Kawkab magazine and Mashaheer Al-Iraq magazine, attended by several local celebrities.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU BY CULTURE ============ -->
+<section id="menu" class="relative py-24 sm:py-32 px-5 sm:px-8 overflow-hidden">
+  <div class="glow-orb glow-orb--top-center glow-orb--md" aria-hidden="true"></div>
+  <div class="glow-orb glow-orb--bottom-left glow-orb--md glow-orb--warm" aria-hidden="true"></div>
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="reveal text-center mb-14">
+      <p class="reveal-eyebrow font-sans text-xs uppercase tracking-[0.3em] text-gold-400 mb-3">
+        <span class="lang-ar">قائمتنا</span><span class="lang-fr">Notre carte</span><span class="lang-en">Our Menu</span>
+      </p>
+      <h2 class="reveal-title font-display text-4xl sm:text-5xl text-cream mb-5">
+        <span class="lang-ar">القائمة الكاملة</span><span class="lang-fr">La carte complète</span><span class="lang-en">The Complete Menu</span>
+      </h2>
+      <p class="font-body text-cream/70 max-w-2xl mx-auto text-lg">
+        <span class="lang-ar">قائمة سيلينا الرسمية الكاملة بالأسعار الدقيقة.</span><span class="lang-fr">La carte officielle complète de Selena, avec les prix exacts.</span><span class="lang-en">Selena's official, complete menu, with exact prices.</span>
+      </p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="reveal flex flex-wrap justify-center gap-3 mb-12" role="tablist" id="menu-tabs">
+      <button class="menu-tab-btn is-active" data-tab="الشوربات" role="tab" aria-selected="true">
+        <span class="lang-ar">الشوربات</span><span class="lang-fr">Soupes</span><span class="lang-en">Soups</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="فطور" role="tab" aria-selected="false">
+        <span class="lang-ar">فطور</span><span class="lang-fr">Petit-déjeuner</span><span class="lang-en">Breakfast</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="المقبلات-الباردة" role="tab" aria-selected="false">
+        <span class="lang-ar">المقبلات الباردة</span><span class="lang-fr">Mezze froids</span><span class="lang-en">Cold Mezze</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="المقبلات-الحارة" role="tab" aria-selected="false">
+        <span class="lang-ar">المقبلات الحارة</span><span class="lang-fr">Mezze chauds</span><span class="lang-en">Hot Mezze</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="السلطات" role="tab" aria-selected="false">
+        <span class="lang-ar">السلطات</span><span class="lang-fr">Salades</span><span class="lang-en">Salads</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="الباستا" role="tab" aria-selected="false">
+        <span class="lang-ar">الباستا</span><span class="lang-fr">Pâtes</span><span class="lang-en">Pasta</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="البيتزا" role="tab" aria-selected="false">
+        <span class="lang-ar">البيتزا</span><span class="lang-fr">Pizza</span><span class="lang-en">Pizza</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="البرغر" role="tab" aria-selected="false">
+        <span class="lang-ar">البرغر</span><span class="lang-fr">Burgers</span><span class="lang-en">Burgers</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="الاطباق-الرئيسية" role="tab" aria-selected="false">
+        <span class="lang-ar">الأطباق الرئيسية</span><span class="lang-fr">Plats principaux</span><span class="lang-en">Main Dishes</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="شرقي" role="tab" aria-selected="false">
+        <span class="lang-ar">شرقي</span><span class="lang-fr">Cuisine orientale</span><span class="lang-en">Oriental Cuisine</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="وجبة-اطفال" role="tab" aria-selected="false">
+        <span class="lang-ar">وجبة أطفال</span><span class="lang-fr">Menu enfant</span><span class="lang-en">Kids' Menu</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="المشاوي" role="tab" aria-selected="false">
+        <span class="lang-ar">المشاوي</span><span class="lang-fr">Grillades</span><span class="lang-en">Grills</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="حلويات" role="tab" aria-selected="false">
+        <span class="lang-ar">حلويات</span><span class="lang-fr">Desserts</span><span class="lang-en">Desserts</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="مشروبات-ساخنة" role="tab" aria-selected="false">
+        <span class="lang-ar">مشروبات ساخنة</span><span class="lang-fr">Boissons chaudes</span><span class="lang-en">Hot Drinks</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="مشروبات-باردة" role="tab" aria-selected="false">
+        <span class="lang-ar">مشروبات باردة</span><span class="lang-fr">Boissons fraîches</span><span class="lang-en">Cold Drinks</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="قهوة-ساخنة" role="tab" aria-selected="false">
+        <span class="lang-ar">قهوة ساخنة</span><span class="lang-fr">Café chaud</span><span class="lang-en">Hot Coffee</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="قهوة-باردة" role="tab" aria-selected="false">
+        <span class="lang-ar">قهوة باردة</span><span class="lang-fr">Café glacé</span><span class="lang-en">Iced Coffee</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="سيكنيتشر" role="tab" aria-selected="false">
+        <span class="lang-ar">سيكنيتشر</span><span class="lang-fr">Signature</span><span class="lang-en">Signature</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="سوفت" role="tab" aria-selected="false">
+        <span class="lang-ar">سوفت</span><span class="lang-fr">Soft</span><span class="lang-en">Soft Drinks</span>
+      </button>
+      <button class="menu-tab-btn " data-tab="اركيلة" role="tab" aria-selected="false">
+        <span class="lang-ar">أركيلة</span><span class="lang-fr">Chicha</span><span class="lang-en">Shisha</span>
+      </button>
+    </div>
+
+    <!-- Panels -->
+    <div id="menu-panels">
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-panel="الشوربات">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/456c0c63ea3af666e959ade2e462d629018da662.png" alt="شوربة العدس" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">شوربة العدس</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">5,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">العدس</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/c3bd4b7c365651205cf2016752bf3fc18c897607.png" alt="شوربة البصل" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">شوربة البصل</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">بصل</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/66097248c19158a6273323b6ce8546dc3807b712.png" alt="شوربة الفطر" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">شوربة الفطر</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">فطر</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="فطور">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/featured/5c66df18d5553b83799f4c45f6af0fd317e4ae8c.png" alt="فطور سيلينا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فطور سيلينا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">29,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">فطور سيلينا لشخصين</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/featured/6acc40560b11e3005dd8fd36be9196be4b325a33.png" alt="فطور سيلينا كونتيننتال" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فطور سيلينا كونتيننتال</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">45,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">فطور سيلينا 4 اشخاص</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="المقبلات-الباردة">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/a56ea2d3591039590f045e12373d6ddffe258f47.png" alt="حمص بطحينه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">حمص بطحينه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/13fbbde160d0ef5ef2089c8616c129868a526873.png" alt="متبل باذنجان" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">متبل باذنجان</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/855df06dc0d2476eeab4d04bb0f818ce262266de.png" alt="ورق عنب" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ورق عنب</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/13c88652b83909c3aa122a1b7d9c3d9030565100.png" alt="ارضي شوكي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ارضي شوكي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">حشوه خاصه تتكون من خليط الجبن واللبنه والجوز  + كاجو + نعنع + زيتون</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/0c74d44e3b13fcfd83fe912910a32cf2d9e175b6.png" alt="لبنه مقرمش" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">لبنه مقرمش</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">خبز تورتيلا مقليه بنكهه خاصه تتكون من لبنه وجبنه الماعز + بندوره+ جوز + بصل اخضر  + نعناع</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/ef53330e32793e99f56e57eee41eea436b745571.png" alt="جاجيك" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">جاجيك</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">5,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">لبن مع خيار وشبنت</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/d0f82acc5b6a58d4695a02de889522481e56f37d.png" alt="باذنجانيه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">باذنجانيه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">باذنجان مقلي+  طماطم + خيار + جزر + بصل +  فلفل الوان  + سمسم + روكا  + دبس رمان</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="المقبلات-الحارة">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/399fcc0d95927a0604abb3457cbe77b63075ac8b.png" alt="حمص سيلينا باللحمة" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">حمص سيلينا باللحمة</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">حمص +بيستو حبق + فستق حلبي + لحم راس عصفور</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/91b1bd7bccd7ac7527abe9f2d6b3591d9f1218c8.png" alt="كبده دجاج" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كبده دجاج</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">9,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">سوده دجاج مقليه + دبس رمان + بطاطا شيبس</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/6b12791a4bb2b01308330829cfa1eb3f2f1d22ac.png" alt="رقاقات جبنه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">رقاقات جبنه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">موزريلا  + عكاوي + بقدونس + زيتون اسود</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/d81a1c3e414b1d6c57b0c75ef164a0023acab577.png" alt="مسخن دجاج" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">مسخن دجاج</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">بصل + دجاج + سماق</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/f0a66e441d8c8b3d72a3f361d748e25a9ddbb39a.png" alt="بطاطا حره" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بطاطا حره</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">بطاطا  + كزبره  + فلفل اخضر  حار</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/51eeda2ab68339efaa36cc9b536de7d8460c7321.png" alt="اصابع موزريلا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">اصابع موزريلا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">جبن مقرمش + صلصة سويت تشيلي</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/featured/8470687cb846a859f182c802e09fdecb2c6af1bc.png" alt="داينمت شرمب" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">داينمت شرمب</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">18,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">قريدس مقرمش مع الصلصه الخاصه</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/5bd697b87886b0f44efc3aff70086e3b0089cf4b.png" alt="كبه مقليه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كبه مقليه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">باللحمه + متبل باذنجان</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/71724e3e882827844cb01eadfd335d71446827a7.png" alt="فخارة سيلينا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فخارة سيلينا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">بصل + بندوره + لحمه راس عصفور + فليفله +صلصة سيلينا الخاصه</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/70ec2ac5de5ebbe0d709a57534ffc643c1ba1db6.png" alt="بطاطا فنغر" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بطاطا فنغر</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">4,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/2e1293af34dd8ddee7e4a0dd20590a0cef041c6d.png" alt="بطاطا ودجز" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بطاطا ودجز</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">5,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="السلطات">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/4212fcf0f5ec1a7be7447e49b62aec34cbcf77f0.png" alt="سيلينا سلاد بالعسل" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سيلينا سلاد بالعسل</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">لولو روسو  لولو فيردي + روكا + جزر + توست + تمر+ مشمش مجفف + صوص خردل بالعسل</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/84a9dd26d69cc0230f15bfcda2a072122785da9a.png" alt="شرمب كينوا سلاد" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">شرمب كينوا سلاد</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">18,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">كينوا  +طماطم كرزيه + روكا +  لولو روسو  لولو فيردي + سندي +  صلصه البرتقال + روبيان</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/1c51dd1bd38232951df24caa25dcf94758e454e3.png" alt="روكا سلاد" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">روكا سلاد</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">روكا + طماطم كرزيه + رمان + جوز +   فجل  +صوص بلسمك + بارميزان</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/cff9b002b4f84ff874925f083581e353daa6b678.png" alt="فتوش" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فتوش</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">خس عربي + خيار + فجل + روكا +  نعناع + صوص فتوش + خبز مقلي + بقله + طماطم+رمان</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/350b904d35f4e4fbb1c1c5f20a6f28c558aa5b5f.png" alt="تبوله" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">تبوله</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">بقدونس + بصل  + بندوره  +نعناع + ليمون + زيت زيتون + برغل</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/537650614077fd58ee22396e286177b232f502b7.png" alt="سيزر" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سيزر</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">خس صيني + خس عربي  + توست + بارميزان + صوص سيزر + دجاج مقرمش + طماطم مجففة + فستق حلبي</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/38d8c9ff06b673969e6083b200db3e13d7bf9c7b.png" alt="يونانيه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">يونانيه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">خيار+ جبنه فيتا + نعناع + بصل هندي + زيتون + طماطم كرزيه + فلفل اخضر + ليمون + زيت زيتون + نعناع</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/dd1cbbe2faf87b2940f6c9973768ee44c705af9c.png" alt="سلطة تونا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سلطة تونا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,500 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/e14ba54ad92dd981139d935c9c3f58d62082c149.png" alt="سوبر هيلثي سالاد" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سوبر هيلثي سالاد</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,500 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="الباستا">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/917853bda315369942e59740274ce0de994efff6.png" alt="لزانيا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">لزانيا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صلصة الطماطم باللحم والبيشاميل</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/b042778206b7ec99e9989323f276863a0e901fed.png" alt="فتوتشيني الفريدو" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فتوتشيني الفريدو</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">18,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">باستا مع صلصة الكريما والمشروم والدجاج</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/23c240103344f4f576e2db5fa7ed03dc6137d99d.png" alt="سبكتي بومودورو" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سبكتي بومودورو</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صوصو الطماطم  +  طماطم كرزيه +  بارميزان</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/b5d10e792a879adf6843ba4a3851130c3bbb3577.png" alt="بني اربياتا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بني اربياتا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">بني باستا مع صلصة البندوره الحاره</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/e1ab8e98bcef1f997afd5ccd2d04d684f4a75529.png" alt="سباغتي بلونيز" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سباغتي بلونيز</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">سباغتي بصلصة البندوره واللحم</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/8925fec59ea47f90407fb5f76aaddee9fc107b1e.png" alt="لنغويني روبيان" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">لنغويني روبيان</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">20,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">لنغويني مع صلصة الكريمة البندوره + روبيان</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="البيتزا">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/82b32d54a2ab82b73832956ad7d3cc77e9b1bd22.png" alt="بيتزا مرغريتا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيتزا مرغريتا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صلصة البندوره + جبنة موزريلا وجبن البرميزان</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/1f92537b702e59b6a8b535bb072b97eaa83889a6.png" alt="بيتزا سموكي تركي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيتزا سموكي تركي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صلصة البندوره + جبنة موزريلا فطر طازج +حبش مدخن</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/700fbd53504f57bfa7f21e0389fe12dc2ba4ae75.png" alt="ببروني" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ببروني</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صلصة البندوره + جبنة موزريلا وجبن برميزان + ببروني بقري</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/5f9e4e0a190362e24f8de4a4bd8bf732a9a123f1.png" alt="بيتزا الخضار" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيتزا الخضار</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صلصة البندوره + جبنة موزريلا وجبن برميزان +كوسا  + فطر + بيتنجان + فلفل الوان + طماطم كرزية</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/a09308bf8e754509096396711e853b07d51053e8.png" alt="بيتزا دجاج" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيتزا دجاج</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صلصة الكريما البيضاء +جبن موزاريلا +  فطر + دجاج +فليفله + جبن برميزان</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/da6359161ff05eeb1b5ea849607a54102cde47a0.png" alt="بيتزا الاجبان الاربعه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيتزا الاجبان الاربعه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صلصة الكريما البيضاء +جبن موزاريلا  وجبنة الشيدر+ بارميزان + بلوتشيز</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/a887ca912baa0a6cccfd94329c507375683fddfb.png" alt="بيتزا لحم" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيتزا لحم</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">18,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صلصة البندوره + جبنة موزريلا وجبن برميزان + لحم غنم + لحم مفروم + فطر + فلفل الون</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="البرغر">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/56066fe5cf86ee9240bebf053e9c4de55b91f543.png" alt="برغر الدجاج المقرمش" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">برغر الدجاج المقرمش</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">13,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">خبزه برغر + صوص خاص + دجاج مقلي + خس ايسبرغ  + طماطم + كبيس</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/fd05fb1edeec57923b13bd2035e6580d279c6fbb.png" alt="باربكيو برغر" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">باربكيو برغر</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">لحمه + صوص خاص +  خس ايسبرغ + طماطم + كبيس  + بصل مقلي و سلصة الباربيكيو</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/dd803cd594bfd5b05904b0bf0b0b61740b680fe8.png" alt="كلاسيك تشيز برغر" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كلاسيك تشيز برغر</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">لحمه + صوص خاص + جبنه شيدر</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/f94ec1a2d624411dbff96f1da40c91d303481995.png" alt="موزريلا بيف برغر" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">موزريلا بيف برغر</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">لحمه + صوص خا ص + فرايد موزريلا</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/21d673bb81835569ff3f92ac2cd87ec848d3812c.png" alt="ماشروم برغر" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ماشروم برغر</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">ماشروم كريم + موزريلا + لحمه + بطاطا ودجز</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/3ab40b7a3dc3fff7686528d5bf99936cab8b7c3a.png" alt="برغر الدجاج المشوي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">برغر الدجاج المشوي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">11,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صوص خاص + دجاج مشوي + خس ايسبورغ  + طماطم + كبيس +بطاطا مقليه</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="الاطباق-الرئيسية">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/eba8dd22eb3bd279a04b555b90633984253ee9ce.png" alt="سمك السالمن  المشوي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سمك السالمن  المشوي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">32,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">سالمن + بطاطا فوندو + بروكلي + فطر مشوي + ليمون مشوي + صلصة الكريمه بالشبنت</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/28e93d21586797c0da463d61ce5a6b0305eff077.png" alt="اسكلوب ميلانيز" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">اسكلوب ميلانيز</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">26,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">اسكالوب الدجاج مقرمش مع الجبن + باستا + صوص طماطم + بارميزان</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/ead0861f0af1cd43bcb2376c6101c9945e092db3.png" alt="صدر دجاج توسكان" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">صدر دجاج توسكان</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">22,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">دجاج  +صلصة توسكانا + بطاطا ودجز + خضار سوتيه</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/bffab94b5de2aa61126e3e36d8e46784ef3ff1fa.png" alt="كوردون بلو" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كوردون بلو</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">22,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صدر دجاج محشي حبش مدخن وجبن مقلي + خضار سوتيه + بطاطا بوريه وصلصة الحبش بالكريمه</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/389e02cf5c4dde4f8ad66b493ea513f7c7b21c11.png" alt="دجاج بالكاري" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">دجاج بالكاري</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">24,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صدر دجاج +صوص كاري + اناناس + بطاطا  + رز</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/df3c1384e7e38c6c55cdaea94192d4df8fbaf725.png" alt="كلاسك ستيك لحم" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كلاسك ستيك لحم</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">28,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">بيف فيليه250غ  + بطاطا ودجز +  خضار سوتيه + صوص دمي غلاس</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/69d8e849500fa6c5917e5a86ebd8f647049d9768.png" alt="سيلينا ستيك ماشروم بالقهوة" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سيلينا ستيك ماشروم بالقهوة</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">29,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">( بنكهة القهوه المكرمله )   بيف فيليه250غ  + بطاطا ودجز +  خضار سوتيه + صوص ماشروم</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/5123e39e62704380919327d391a74e9f1cc5f71b.png" alt="روبيان بالزعفران" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">روبيان بالزعفران</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">29,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">روبيان + بطاطا +فليفله+كزبره + زعفران + رز</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/featured/3b92838755824f7a00178454b9fde4e3fe3f33e3.jpeg" alt="مارتا ستيك" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">مارتا ستيك</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">29,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شريحة من لحم التندر لوين مع الخضار المشوية والبطاطا الويدجز وصوص الاعشاب الكريمي</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="شرقي">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/featured/a59fda597f2c461b097f9534f4bd23c8897265b1.png" alt="قلية موصلية" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">قلية موصلية</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">28,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">قطع من لحم فخد الغنم العراقي واللية وخبز عراقي يتضمنه البصل واللومي مع الرز الابيض</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/5c496b948b7650beab383a929cbfeec98f5dfc4a.png" alt="برياني دجاج" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">برياني دجاج</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">22,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/a6bdc556609662a42dd040a40531ee072d91d8a7.png" alt="مقلوبه لحم" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">مقلوبه لحم</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">29,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/0af9002227c94826b610b393676188b0bd1156fa.png" alt="دولمة" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">دولمة</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">29,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/a5bfae5da02a2d29c05d21861a2b57155645509c.png" alt="شاكرية" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">شاكرية</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">24,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/80238a01dc87610cdf44c523a67991ad3804ba98.png" alt="كبه لبنيه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كبه لبنيه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">22,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/c85087bcd1d23962706b3941ca893c99fa0ee235.png" alt="قوزي لحم" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">قوزي لحم</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">29,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/42d95ef1d712108714ff8385129d974e3ee32f09.png" alt="كبسه دجاج" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كبسه دجاج</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">22,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/6546a6a68e58d4deb8886582b920c37352735662.jpeg" alt="رز اضافي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">رز اضافي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">4,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/c587d5b39e205bbceb029cca7e535a4e3559fa4e.png" alt="لبن زبادي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">لبن زبادي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">4,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/6930aaf1ee516aed5b6da63da0e70e4daa293ee4.jpeg" alt="مرق باميه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">مرق باميه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">4,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/d2b8086af6a2b9c5dc579dc908465ffa370cfb37.jpeg" alt="مرق تبسي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">مرق تبسي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">4,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/df5d25e0bf2014c90159584550c0ff5d4ae5d1ad.jpeg" alt="مرق فاصولية" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">مرق فاصولية</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">4,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="وجبة-اطفال">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/featured/aa09e1df87a196146a4a0017e3938672489ec22d.png" alt="تشيكن ناكتس" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">تشيكن ناكتس</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">دجاج ناكتس مع الفنكر وسلطة الملفوف وصوص الكوكتيل وخبز كانتاكي</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/featured/495971b5f623c6bc996149680ccb7b817cb92136.png" alt="بيبي كورن" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيبي كورن</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">9,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">10 قطع دجاج مقرمشة مع الفنكر صوص كوكتيل وسلطة الملفوف مع قطعتين خبر</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="المشاوي">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/11fb19eed74524d820b2489584e07df0e073bdd5.png" alt="كباب دجاج" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كباب دجاج</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">18,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">كباب دجاج مشوي بنكهه خاصه + كريم الثوم + كبيس</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/fc889de39a4e2c3f403b5680af959326ce2641aa.png" alt="كباب لحم" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كباب لحم</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">24,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">كباب اللحم مشوي بنكهه عراقيه + حمص طحينه + كبيس</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/d780f01ca29227f41956d06c12fbd4c22c82bc48.png" alt="شيش طاووق" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">شيش طاووق</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">18,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">تكه دجاج مشوي + كريم الثوم + كبيس</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/ee7ba886b083f0c9769e631a7408249e9508e350.png" alt="تكه لحم" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">تكه لحم</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">27,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">اللحم مشوي بنكهه عراقيه + حمص طحينه + كبيس</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/7b241008deec6713691665b6d3eb86263bf36bb8.png" alt="عرايس" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">عرايس</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">خبز عراقي محشي كباب لحم عراقي + كبيس</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/93489a192fc2d7324796d97a887b3635b9556244.png" alt="لحم كباب سيلينا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">لحم كباب سيلينا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">29,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">كباب مشويه بنكه سيلينا الخاصه  + صوص الخضار المشويه+كبيس +حمص+فنغر</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/ea1a35f90dfcfa9840a6e829b998277d3ea6984f.png" alt="بيبي تشكن" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيبي تشكن</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">22,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">نصف دجاجه مشويه بنكه سيلينا الخاصه + فنغر مع كبيس وتومية</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/98d8d61529be37580e2882ba290c8e947c5daea1.png" alt="مشاوي مشكل" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">مشاوي مشكل</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">48,500 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">1200 غ مشاوي مشكل</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/featured/1f4dfc3c27db5e35f408ddbd86c6faf57213bb55.jpeg" alt="مشاوي مشكل صغير" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">مشاوي مشكل صغير</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">25,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شيش تكة دجاج،  شيش تكة لحم ، شيش كباب لحم مع الطماطة المشوية والبصل المشوي والخضار مرافق الطبق حمص بطحينة،  كريم توم ، مخلل</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="حلويات">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/1fc3a2c3e121d8d9525ae2f5027a68b7d458fe55.png" alt="حلكومي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">حلكومي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">10,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">كعكة الحليب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/8220fac8cbc9d212e229c58aa0e70ce8b2ae9a7e.png" alt="موس جوز الهند" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">موس جوز الهند</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/42536bd2825869d704fdd88fecb9e648b10e170b.png" alt="سوفليه الفانيلا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سوفليه الفانيلا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">فانيلا سوفليه</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/45a6dec3bcdd521dcbfe3564f96c2b3758624c7e.png" alt="بنانا بودينغ" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بنانا بودينغ</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">10,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">بودينغ الموز</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/a2da3c74237a17740c64179e33bf0cf0fc22113a.png" alt="سنيكرز شوكلت" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سنيكرز شوكلت</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">سنيكرز الشوكولاته</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/7b19b14e99a49eae6ec60cc1d4e3eb63bb4bf9b3.png" alt="تشيز كيك مدريد" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">تشيز كيك مدريد</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/559332b5ae71766fe4aa56f0842c7fe5181ed47b.png" alt="كوفي بينز" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كوفي بينز</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">موس القهوة</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/9df25ddc196687fe9e9347f1119e3837deff60a2.png" alt="ابريكوت كريم بروليه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ابريكوت كريم بروليه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">كريم بروليه بالمشمش</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/featured/c74f920aab0c0ba8fd3e5df7df24a986a60fe132.jpeg" alt="فواكي مشكلة" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فواكي مشكلة</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">طبق فاكهة مشكل طازج</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="مشروبات-ساخنة">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/698f674a234900c3d08f7bbb87e629186d3a5223.png" alt="شاي عراقي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">شاي عراقي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">1,500 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/99e274c3024211db861dc328ccd60d87117a7ba6.png" alt="شاي اخضر" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">شاي اخضر</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">2,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/7377c938dea87a1e71a046e624523658ecea9c99.png" alt="كركديه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كركديه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">4,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/be7dacb2755f72e701f3c8950758da71493ae6f6.png" alt="زهورات" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">زهورات</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">3,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/08517dff6b3802efe189252ddfc46448a766985f.png" alt="كمون وليمون" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كمون وليمون</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">3,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="مشروبات-باردة">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/ba379fe488e252e4c5a0055e4d55c7fc2cc5883d.png" alt="موهيتو تي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">موهيتو تي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/384151f4f16c873de72722c177c5bd073d45c506.png" alt="ريد بول مكسيكي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ريد بول مكسيكي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/61087da7d9bd3941bb992deb14ebd74bcd49af86.png" alt="مياه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">مياه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">2,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/7692b395de37cf90641db05eda489824741c6ec9.png" alt="تايكر" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">تايكر</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">3,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/3c603ca2bf3e4b804bef0f6529eef5a54a8a00aa.png" alt="ريد بول" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ريد بول</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/404b934b1dc1e9cc7e65d3bc011ee65907ca6594.png" alt="فراولة ميلك شيك" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فراولة ميلك شيك</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">ايس كريم 	
+فراولة مجمدة 
+	حليب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/6b5d8d858b37e498f5d75c0a8eb7e49daa868a6b.png" alt="كيت كات ميلك شيك" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كيت كات ميلك شيك</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">ايس كريم 	
+كيت كات 
+	حليب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/1fa550713c01a02f090730c55191808035e3ab1c.png" alt="لوتس ميلك شيك" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">لوتس ميلك شيك</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">ايس كريم 
+	لوتس
+	حليب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/0e3c25e2ae822d0d23d04abb8cc89d4c0296eb89.png" alt="اوريو ميلك شيك" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">اوريو ميلك شيك</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">ايس كريم
+	اوريو 	
+حليب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/4da4ce491da617149a6da2b21e0b3050830ced68.png" alt="غرين سموذي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">غرين سموذي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">13,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">تفاح سيروب 	
+بيوري كيوي</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/dd8ee1184310f8329cfb5d14ecad0c1435b85d24.jpeg" alt="بيري دانس" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيري دانس</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">13,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">توت اسود بيوري 
+	توت بري بيوري 	
+توت ازرق بيوري 	
+فراولة مجمدة</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/94805206927e9d7981fbb1ca5b459fcf95794d3c.png" alt="سموذي تروبيكل" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سموذي تروبيكل</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">13,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">توت ازرق بيوري 	باشن فريت بيوري 	فراولة بيوري</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/e65b85078d7cab57c8b0468e4b583d0c102379e3.png" alt="بنانا شيك" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بنانا شيك</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">9,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/707c539f29d0f3d1582275ee86df0e5f47bca008.png" alt="توت ازرق" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">توت ازرق</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صودا	ليمون 	توت ازرق سيروب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/7098bd6ae31ce477d9d49aa56fd280dbe5bf98c6.png" alt="باشن فريت" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">باشن فريت</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صودا	ليمون 	باشن سيروب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/b5e3d1c48f59f1ea1eb1eddfa43b74f83f55bdd7.png" alt="هاواي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">هاواي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صودا	عصير اناناس	بلو كرساو سيروب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/7a11ea9d24a01bffe19ce88eb5cd3fe692138f04.png" alt="رمان" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">رمان</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">سيروب رمان 
+ليمون 
+صودا</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/f9b8543523172b3cc07ffd810bb92978fab4eba5.png" alt="فراولة" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فراولة</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">سيروب فراولة
+ليمون 
+صودا</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/0d2321442e9ac4762f1b98d2c858b7d6d8c7416f.png" alt="راد ليمونايت" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">راد ليمونايت</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">9,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/c7864a843f2e56e54b3bd803797d537ceb28efec.png" alt="عصير رمان" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">عصير رمان</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">12,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/f8fd2a7cc6c59fc36181fc5112d8012b74085db3.png" alt="بطيخ" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بطيخ</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/cc587d3be30415d6d66fc926b291c9686933a148.png" alt="عصير ليمون ونعناع" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">عصير ليمون ونعناع</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">ليمون ونعناع</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/22fd2a1d4dd932a1bcc6f882fd9f77291e9f2dc6.png" alt="برتقال" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">برتقال</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="قهوة-ساخنة">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/b34ae0ee7339f3dcbb00e4b21bc1182fd4919f2e.png" alt="سنكل ايسبريسو" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سنكل ايسبريسو</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">4,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/9702590e407c1a0bf21d8897c56c8f95fa245f03.png" alt="دبل شوت اسبريسو" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">دبل شوت اسبريسو</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">دبل</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/0dc4f81a135558583049ef0e8bee5780d81c245e.png" alt="قهوة تركية" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">قهوة تركية</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">5,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/e269babad60738bd3cd79067d7020752d13878f4.png" alt="دبل تركش" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">دبل تركش</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/9acad94ac5c32503baf6f2644478e225b4837950.png" alt="لاتيه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">لاتيه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/afbdda18b61a3e6b63c8cd228ecb9c54fefcf6fb.png" alt="كرميل لاتيه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كرميل لاتيه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/732b2b2273b87ed791cd8b770f288f26195842c5.png" alt="سبانيش لاتيه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سبانيش لاتيه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">كرنش</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/cc1fc0178ccda876e3eb1166ccb09b1dcfe44735.png" alt="موكا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">موكا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/7264650cd632021aec7bc3619ef67632dd939b20.png" alt="كابوتسينو" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كابوتسينو</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/aa44dc5fef67335ef2a90cf31b7df900659ce037.png" alt="فلات وايت" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فلات وايت</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/3463540af6203dfc0317d76aee5461d5cc12f81c.png" alt="نسكافيه بالحليب" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">نسكافيه بالحليب</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/c260edaef57c24aea8de7a075bfe60b3bd0ea087.png" alt="هوت شوكولا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">هوت شوكولا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="قهوة-باردة">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/eb3a910290faf50e7ee5d1c624bbe4455428b6cc.png" alt="ايس لاتيه" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ايس لاتيه</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">8,500 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/16f1234aa9184fb05ec461699c2dc25ebeded81e.png" alt="ايس كراميل" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ايس كراميل</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">9,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/4e876089532f47ce20801559dd1eee55da85ea01.png" alt="ايس سبانش" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ايس سبانش</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">9,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/f537e37afb2d1ce44c94df5067d9ac01f3ce3b0a.png" alt="بيستاشيو فراب" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيستاشيو فراب</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">11,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/e176fb3120143e4389bcf7872715324cd5a42128.png" alt="كراميل فراب" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كراميل فراب</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">9,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/5023305f2fc1de216ac5e76c30e4237a0410385f.png" alt="كوكيز كافي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كوكيز كافي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">9,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="سيكنيتشر">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/7462a6090408fa910527322a4655eda99d058830.png" alt="ايفوري" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ايفوري</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">13,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">جوز الهند سيروب
+ 	اناناس عصير</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/57ed0d1739c9c3f9b902441660f9538344ef51b0.png" alt="فالفت" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فالفت</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">14,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">فراولة سيروب
+ 	خوخ سيروب 
+	برتقال عصير 	
+اناناس عصير</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/a68cd38ab206f77e2a5fcde2f96adbd94bf386c6.png" alt="اورورا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">اورورا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">باشن فريت سيروب 	
+ببل كم سيروب 
+	برتقال عصير 
+	اناناس عصير
+ 	بلو كرساو سيروب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/48204e587057713638f5421857aba5e73b835362.png" alt="امبرور" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">امبرور</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">تمر 
+	حليب 	
+جوز  
+	افوكادو</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/45f1fe7425dca96427b40caa3b3665c157a06166.png" alt="فريت سبارك" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فريت سبارك</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">صودا 	
+مانغا مجمدة 
+	اناناس 
+	فراولة مجمدة 
+	موز</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/70c95d3df92f7074bec5c884ea4acb308f21e172.png" alt="هارموني ميلك شيك" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">هارموني ميلك شيك</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">توت ازرق بيوري 	
+باشن بيوري 	
+منغا بيوري 
+	علك سيروب</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/d58d93059603aa6ded5c95a0a879866e88a04e16.png" alt="سكارلت" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سكارلت</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">15,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">غريب فريت سيروب 	
+سيروب ورد	
+توت ازرق سيروب</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="سوفت">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/70934411dfacef35c82b71c809b517c6998486f1.png" alt="بيبسي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيبسي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">2,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/47f4167c808788cfca433b77e791fb0a2e9cba07.png" alt="بيبسي دايت" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيبسي دايت</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">2,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/a143a8949df82ef7ba828e3460405f456ddcd96d.png" alt="سفن" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سفن</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">2,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/7aef3526958bf2ae75869684e3a462e008f0eb48.png" alt="سفن دايت" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سفن دايت</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">2,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/400f04ca40c54d2f499952cfd80e4238e109d742.png" alt="ميراندا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ميراندا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">2,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/c48c70fc54c6649aab06b52a7e9b7318bed923e9.png" alt="بيريي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">بيريي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">7,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/bb63f5b3805af5d9fd5ee6c53ebb954c44f15d38.png" alt="لبن" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">لبن</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">2,500 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-panel grid sm:grid-cols-2 lg:grid-cols-3 gap-5 hidden" data-panel="اركيلة">
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/0b98c3f8be585070327a5bfbf1371d4b61f88b6a.jpg" alt="سيلينا VIP" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سيلينا VIP</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">17,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">سلينا VIP</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/a64be7f692e2ebbfc7c84070fb3bfa0bf9150492.jpg" alt="سيلينا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سيلينا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">17,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شيشة سلينا</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/77d8d782bf961f61858cb74b0b3f44d91935c995.jpg" alt="انكليزي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">انكليزي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شيشة انكليزي</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/eb5dbf9bdf9c341a904310b3b075aa48b72a069a.jpg" alt="ليمون ونعناع" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">ليمون ونعناع</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شيشة ليمون ونعناع</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/8160b10e5bcb1d3841d2565756c0be915468a4d6.jpg" alt="نعناع" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">نعناع</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شيشة نعناع</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/fa8ed402bfbf487d0ac5c0c856c9aa7bcc8e1a29.jpg" alt="تفاحتين" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">تفاحتين</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شيشة تفاحتين</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/d7c62a6b76e0502d4d3e040b623443b8673f9b4c.jpg" alt="عنب و نعناع" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">عنب و نعناع</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شيشة عنب و نعناع</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/94299751a4567c87f02d8e9fcd312aa66d5f1c3c.jpg" alt="فور ليدي" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">فور ليدي</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شيشة سلينا فور ليدي</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/19ff006350c04ad37b1f72f35b6853696c299861.jpg" alt="علك و شمام" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">علك و شمام</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">شيشة علك و شمام</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/222ec1647d6c5d15ce5496b83db5507505d9ac9e.jpg" alt="علك ونعناع" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">علك ونعناع</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">اركيلة علك ونعناع</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/9360e3fc39bcc2098ef9d2111e7ebf03ba1686ce.jpg" alt="حمضيات" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">حمضيات</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/f17c411ad19b952f29cbbc16a60942453c7c0ed6.jpg" alt="سلاش" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سلاش</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/e4b71e1fbda8a2a6df1b6626e75e1e6269898853.jpg" alt="كيوي وليمون" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">كيوي وليمون</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">16,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/2f75a20b391c5aa9d8be5cc0750db68805f3ed7c.jpg" alt="سبشل سيلينا" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">سبشل سيلينا</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">27,000 IQD</span>
+            </div>
+            
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/9b819fc489e3c5acabcbfe6a38a17c67eed899f9.jpg" alt="شو" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">شو</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">33,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">اركيلة شو</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-item-img"><img src="https://smart-qrmenu.com/assets/front/img/product/sliders/b7eb50965cdc51127dd79db13587744e6a18e52c.jpeg" alt="تغير راس" loading="lazy" /></div>
+          <div class="menu-item-body">
+            <div class="flex justify-between gap-4">
+              <h3 class="font-display text-lg text-gold-200">تغير راس</h3>
+              <span class="font-sans text-gold-400 whitespace-nowrap text-sm" dir="ltr">6,000 IQD</span>
+            </div>
+            <p class="font-body text-cream/65 mt-2 text-sm">تغير رأس اركيله</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVATIONS ============ -->
+<section id="reservations" class="relative py-24 sm:py-32 px-5 sm:px-8 bg-burgundy-950/40 overflow-hidden">
+  <div class="glow-orb glow-orb--center glow-orb--lg" aria-hidden="true"></div>
+  <div class="max-w-3xl mx-auto reveal relative z-10">
+    <div class="text-center mb-12">
+      <p class="reveal-eyebrow font-sans text-xs uppercase tracking-[0.3em] text-gold-400 mb-3">
+        <span class="lang-ar">الحجوزات</span><span class="lang-fr">Réservations</span><span class="lang-en">Reservations</span>
+      </p>
+      <h2 class="reveal-title font-display text-4xl sm:text-5xl text-cream mb-5">
+        <span class="lang-ar">احجز ليلتك المميزة</span><span class="lang-fr">Réservez votre soirée d'exception</span><span class="lang-en">Reserve Your Exceptional Evening</span>
+      </h2>
+      <p class="font-body text-cream/70 text-lg">
+        <span class="lang-ar">سنتواصل معك لتأكيد الحجز خلال دقائق.</span><span class="lang-fr">Nous vous contacterons pour confirmer votre réservation sous quelques minutes.</span><span class="lang-en">We'll contact you to confirm your reservation within minutes.</span>
+      </p>
+    </div>
+
+    <form id="reservation-form" class="card-surface rounded-3xl p-6 sm:p-10 grid sm:grid-cols-2 gap-5" novalidate>
+      <div class="sm:col-span-1">
+        <label class="form-label" for="r-name"><span class="lang-ar">الاسم الكامل</span><span class="lang-fr">Nom complet</span><span class="lang-en">Full Name</span></label>
+        <input id="r-name" name="name" type="text" required class="form-input" autocomplete="name" />
+      </div>
+      <div class="sm:col-span-1">
+        <label class="form-label" for="r-phone"><span class="lang-ar">رقم الهاتف</span><span class="lang-fr">Téléphone</span><span class="lang-en">Phone</span></label>
+        <input id="r-phone" name="phone" type="tel" required class="form-input" autocomplete="tel" placeholder="+964 7XX XXX XXXX" />
+      </div>
+      <div class="sm:col-span-1">
+        <label class="form-label" for="r-date"><span class="lang-ar">التاريخ</span><span class="lang-fr">Date</span><span class="lang-en">Date</span></label>
+        <input id="r-date" name="date" type="date" required class="form-input" />
+      </div>
+      <div class="sm:col-span-1">
+        <label class="form-label" for="r-time"><span class="lang-ar">الوقت</span><span class="lang-fr">Heure</span><span class="lang-en">Time</span></label>
+        <input id="r-time" name="time" type="time" required class="form-input" />
+      </div>
+      <div class="sm:col-span-1">
+        <label class="form-label" for="r-guests"><span class="lang-ar">عدد الضيوف</span><span class="lang-fr">Nombre de convives</span><span class="lang-en">Number of Guests</span></label>
+        <input id="r-guests" name="guests" type="number" min="1" max="40" required class="form-input" value="2" />
+      </div>
+      <div class="sm:col-span-1">
+        <label class="form-label" for="r-occasion"><span class="lang-ar">المناسبة (اختياري)</span><span class="lang-fr">Occasion (optionnel)</span><span class="lang-en">Occasion (optional)</span></label>
+        <input id="r-occasion" name="occasion" type="text" class="form-input" />
+      </div>
+      <div class="sm:col-span-2">
+        <label class="form-label" for="r-notes"><span class="lang-ar">ملاحظات إضافية</span><span class="lang-fr">Notes additionnelles</span><span class="lang-en">Additional Notes</span></label>
+        <textarea id="r-notes" name="notes" rows="3" class="form-input resize-none"></textarea>
+      </div>
+
+      <div class="sm:col-span-2 flex flex-wrap items-center gap-4 pt-2">
+        <button type="submit" class="btn-gold">
+          <span class="lang-ar">تأكيد الحجز</span><span class="lang-fr">Confirmer la réservation</span><span class="lang-en">Confirm Reservation</span>
+        </button>
+        <a id="whatsapp-reserve" href="https://wa.me/9647850505098" target="_blank" rel="noopener" class="btn-outline-gold">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.6 11.6 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6A11.9 11.9 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.5zM12 21.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-3.7.9.9-3.6-.3-.4A9.7 9.7 0 0 1 2.2 12C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5 1 6.9 2.9A9.6 9.6 0 0 1 21.8 12c0 5.4-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1l-.9 1.2c-.2.2-.3.2-.6.1-1.6-.6-2.6-2.1-2.8-2.4-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.4 0-.6l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9 1-1 2.3-.1 1.4.6 2.8 1.7 4.2 1.4 1.8 2.9 2.6 4.7 3 1.1.3 2 .2 2.6 0 .5-.1 1.5-.7 1.7-1.4.2-.7.2-1.3.1-1.4-.1-.1-.2-.1-.4-.2z"/></svg>
+          <span class="lang-ar">واتساب</span><span class="lang-fr">WhatsApp</span><span class="lang-en">WhatsApp</span>
+        </a>
+        <span id="form-success" class="hidden text-gold-300 font-body text-sm">
+          <span class="lang-ar">شكرًا لك! سنتواصل معك قريبًا لتأكيد الحجز.</span><span class="lang-fr">Merci ! Nous vous contacterons bientôt pour confirmer.</span><span class="lang-en">Thank you! We'll contact you shortly to confirm.</span>
+        </span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section id="location" class="relative py-24 sm:py-32 px-5 sm:px-8 overflow-hidden">
+  <div class="glow-orb glow-orb--top-right glow-orb--md glow-orb--warm" aria-hidden="true"></div>
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="reveal text-center mb-14">
+      <p class="reveal-eyebrow font-sans text-xs uppercase tracking-[0.3em] text-gold-400 mb-3">
+        <span class="lang-ar">الموقع</span><span class="lang-fr">Emplacement</span><span class="lang-en">Location</span>
+      </p>
+      <h2 class="reveal-title font-display text-4xl sm:text-5xl text-cream mb-5">
+        <span class="lang-ar">تجدنا في قلب المنصور</span><span class="lang-fr">Au cœur d'Al-Mansour</span><span class="lang-en">In the Heart of Al-Mansour</span>
+      </h2>
+    </div>
+
+    <div class="reveal max-w-xl mx-auto">
+      <div class="card-surface rounded-3xl p-8 sm:p-10 flex flex-col gap-6 justify-center">
+        <div class="flex items-start gap-4">
+          <svg class="text-gold-400 shrink-0 mt-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+          <div>
+            <h3 class="font-display text-lg text-gold-200 mb-1"><span class="lang-ar">العنوان</span><span class="lang-fr">Adresse</span><span class="lang-en">Address</span></h3>
+            <p class="font-body text-cream/75">
+              <span class="lang-ar">المنصور، الدعوادي، شارع التانك، بغداد، العراق</span><span class="lang-fr">Al-Mansour, Al-Dawoudi, Tank Street, Bagdad, Irak</span><span class="lang-en">Al-Mansour, Al-Dawoudi, Tank Street, Baghdad, Iraq</span>
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <svg class="text-gold-400 shrink-0 mt-1" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3.5 2"/></svg>
+          <div>
+            <h3 class="font-display text-lg text-gold-200 mb-1"><span class="lang-ar">ساعات العمل</span><span class="lang-fr">Horaires</span><span class="lang-en">Hours</span></h3>
+            <p class="font-body text-cream/75">
+              <span class="lang-ar">يوميًا من ٨ صباحًا حتى ٣ فجرًا</span><span class="lang-fr">Tous les jours de 8h à 3h du matin</span><span class="lang-en">Daily from 8AM to 3AM</span>
+            </p>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=Al-Mansour+Al-Dawoudi+Tank+Street+Baghdad" target="_blank" rel="noopener" class="btn-outline-gold w-fit">
+          <span class="lang-ar">فتح في خرائط Google</span><span class="lang-fr">Ouvrir dans Google Maps</span><span class="lang-en">Open in Google Maps</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer id="contact" class="relative pt-24 pb-10 px-5 sm:px-8 border-t hairline-gold border-t-[0.5px] overflow-hidden">
+  <div class="glow-orb glow-orb--top-center glow-orb--lg" aria-hidden="true"></div>
+  <div class="max-w-6xl mx-auto relative z-10">
+
+    <div class="reveal arch-card mx-auto mb-16">
+      <svg class="arch-card-svg" viewBox="0 0 300 230" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <path d="M40 210 V110 C40 55 90 25 150 25 C210 25 260 55 260 110 V210" class="arch-line arch-line-outer"/>
+        <path d="M58 210 V112 C58 65 100 40 150 40 C200 40 242 65 242 112 V210" class="arch-line arch-line-inner"/>
+        <rect x="44" y="196" width="11" height="11" class="arch-corner"/>
+        <rect x="245" y="196" width="11" height="11" class="arch-corner"/>
+        <path d="M90 32 C115 20 185 20 210 32" class="arch-line arch-flourish"/>
+        <rect x="146" y="14" width="9" height="9" transform="rotate(45 150.5 18.5)" class="arch-finial"/>
+        <g class="arch-diamonds">
+          <rect x="138" y="68" width="5" height="5" transform="rotate(45 140.5 70.5)"/>
+          <rect x="147" y="62" width="6" height="6" transform="rotate(45 150 65)"/>
+          <rect x="157" y="68" width="5" height="5" transform="rotate(45 159.5 70.5)"/>
+        </g>
+      </svg>
+      <div class="arch-card-content">
+        <p class="arch-card-label">
+          <span class="lang-ar">تواصل عبر</span><span class="lang-fr">Contact at</span><span class="lang-en">Contact at</span>
+        </p>
+        <p class="arch-card-numbers">
+          <a href="tel:+9647850505098" dir="ltr">078 50 50 50 98</a>
+          <a href="tel:+9647750505098" dir="ltr">077 50 50 50 98</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal grid sm:grid-cols-3 gap-10 mb-16">
+      <div>
+        <h3 class="font-display text-2xl text-gold-gradient mb-4"><span class="lang-ar">سيلينا</span><span class="lang-fr">Selena</span><span class="lang-en">Selena</span></h3>
+        <p class="font-body text-cream/65 leading-relaxed">
+          <span class="lang-ar">تجربة طعام فاخرة ومتعددة الثقافات في قلب بغداد، مفتوحة من الفجر حتى الفجر.</span><span class="lang-fr">Une expérience culinaire de luxe et multiculturelle au cœur de Bagdad, ouverte de l'aube à l'aube.</span><span class="lang-en">A luxurious, multicultural dining experience in the heart of Baghdad, open from dawn to dawn.</span>
+        </p>
+      </div>
+      <div>
+        <h4 class="font-sans text-xs uppercase tracking-[0.25em] text-gold-400 mb-4"><span class="lang-ar">تواصل معنا</span><span class="lang-fr">Contact</span><span class="lang-en">Contact</span></h4>
+        <ul class="space-y-3 font-body text-cream/75">
+          <li class="flex items-center gap-3">
+            <svg class="text-gold-400" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L13 14l5 2v4a2 2 0 0 1-2 2C8.6 22 2 15.4 2 7a2 2 0 0 1 1-2"/></svg>
+            <a href="tel:+9647850505098" dir="ltr" class="hover:text-gold-300 transition-colors">+964 785 050 5098</a> /
+            <a href="tel:+9647750505098" dir="ltr" class="hover:text-gold-300 transition-colors">+964 775 050 5098</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="text-gold-400" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.5 3.5A11.6 11.6 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6A11.9 11.9 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.5z"/></svg>
+            <a href="https://wa.me/9647850505098" target="_blank" rel="noopener" class="hover:text-gold-300 transition-colors"><span class="lang-ar">راسلنا على واتساب</span><span class="lang-fr">Message WhatsApp</span><span class="lang-en">WhatsApp Message</span></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-sans text-xs uppercase tracking-[0.25em] text-gold-400 mb-4"><span class="lang-ar">تابعنا</span><span class="lang-fr">Suivez-nous</span><span class="lang-en">Follow Us</span></h4>
+        <div class="flex items-center gap-4">
+          <a href="https://www.instagram.com/selena__restaurant" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/search/top/?q=Selena%20Restaurant%20Baghdad" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8.5h2.5V5.5H14c-2 0-3.5 1.5-3.5 3.5v2H8.5v3H10.5V21h3v-7h2.3l.5-3H13.5v-1.5c0-.5.5-1 1-1z"/></svg>
+          </a>
+          <a href="https://wa.me/9647850505098" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.6 11.6 0 0 0 12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6A11.9 11.9 0 0 0 12 24c6.6 0 12-5.4 12-12 0-3.2-1.3-6.2-3.5-8.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream/40 font-sans uppercase tracking-[0.15em]">
+      <p><span class="lang-ar">© ٢٠٢٦ سيلينا. جميع الحقوق محفوظة.</span><span class="lang-fr">© 2026 Selena. Tous droits réservés.</span><span class="lang-en">© 2026 Selena. All rights reserved.</span></p>
+      <p><span class="lang-ar">صُمم بفخر في بغداد</span><span class="lang-fr">Conçu avec fierté à Bagdad</span><span class="lang-en">Designed with pride in Baghdad</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
