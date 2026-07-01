@@ -254,38 +254,51 @@
     });
   });
 
-  /* ---------------- Reservation form (front-end only demo) ---------------- */
+  /* ---------------- Reservation form → WhatsApp ---------------- */
   var form = document.getElementById('reservation-form');
-  var successMsg = document.getElementById('form-success');
+  var waBtn = document.getElementById('whatsapp-reserve-btn');
 
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+  if (form && waBtn) {
+    waBtn.addEventListener('click', function () {
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-
       var data = new FormData(form);
-      var details =
-        'Selena Reservation Request%0A' +
-        'Name: ' + data.get('name') + '%0A' +
-        'Phone: ' + data.get('phone') + '%0A' +
-        'Date: ' + data.get('date') + '%0A' +
-        'Time: ' + data.get('time') + '%0A' +
-        'Guests: ' + data.get('guests') + '%0A' +
-        'Occasion: ' + (data.get('occasion') || '-') + '%0A' +
-        'Notes: ' + (data.get('notes') || '-');
-
-      var whatsappLink = document.getElementById('whatsapp-reserve');
-      if (whatsappLink) {
-        whatsappLink.href = 'https://wa.me/9647850505098?text=' + details;
+      var lang = html.getAttribute('data-lang') || 'ar';
+      var msg;
+      if (lang === 'ar') {
+        msg =
+          '🍽️ *طلب حجز — مطعم سيلينا*\n' +
+          'الاسم: ' + data.get('name') + '\n' +
+          'الهاتف: ' + data.get('phone') + '\n' +
+          'التاريخ: ' + data.get('date') + '\n' +
+          'الوقت: ' + data.get('time') + '\n' +
+          'عدد الضيوف: ' + data.get('guests') + '\n' +
+          'المناسبة: ' + (data.get('occasion') || '—') + '\n' +
+          'ملاحظات: ' + (data.get('notes') || '—');
+      } else if (lang === 'fr') {
+        msg =
+          '🍽️ *Demande de réservation — Restaurant Selena*\n' +
+          'Nom : ' + data.get('name') + '\n' +
+          'Téléphone : ' + data.get('phone') + '\n' +
+          'Date : ' + data.get('date') + '\n' +
+          'Heure : ' + data.get('time') + '\n' +
+          'Convives : ' + data.get('guests') + '\n' +
+          'Occasion : ' + (data.get('occasion') || '—') + '\n' +
+          'Notes : ' + (data.get('notes') || '—');
+      } else {
+        msg =
+          '🍽️ *Reservation Request — Selena Restaurant*\n' +
+          'Name: ' + data.get('name') + '\n' +
+          'Phone: ' + data.get('phone') + '\n' +
+          'Date: ' + data.get('date') + '\n' +
+          'Time: ' + data.get('time') + '\n' +
+          'Guests: ' + data.get('guests') + '\n' +
+          'Occasion: ' + (data.get('occasion') || '—') + '\n' +
+          'Notes: ' + (data.get('notes') || '—');
       }
-
-      if (successMsg) {
-        successMsg.classList.remove('hidden');
-      }
-      form.reset();
+      window.open('https://wa.me/9647850505098?text=' + encodeURIComponent(msg), '_blank');
     });
   }
 
